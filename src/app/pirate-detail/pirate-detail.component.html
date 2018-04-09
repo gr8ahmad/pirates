@@ -1,18 +1,14 @@
-<div *ngIf="pirate">
+<!-- <div *ngIf="pirate"> -->
+  <button (click)="goBack()">go back</button>
   <h2> {{ pirate.name | uppercase }} Details</h2>
   <div>
     <span>id: </span> {{ pirate.id }}
-
   </div>
-
   <div>
     <span>name: </span> {{ pirate.name }}
-
   </div>
   <div>
     <label>Name:
       <input type="text" [(ngModel)]="pirate.name" placehodler="name">
-
     </label>
   </div>
-</div>

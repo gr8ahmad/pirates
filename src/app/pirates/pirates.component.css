@@ -34,6 +34,18 @@
   background-color: #fff;
   /* left: .1em; */
 }
+.pirates a {
+  color: #888;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+.pirates a:hover {
+  color: #607D8B;
+}
+
 
 .pirates .text {
   position: relative;

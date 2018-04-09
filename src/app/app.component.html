@@ -1,2 +1,11 @@
-<div class="logo"><img src="../assets/pirates-logo.png" style="width: 350px"></div>
-    <app-pirates></app-pirates>
+<header>
+<nav style="position: fixed;left:0;top:0">
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/pirates">Pirates</a>
+</nav>
+<div class="logo" style="text-align: center">
+    <img src="../assets/pirates-logo.png" style="width: 250px">
+</div>
+</header>
+    <router-outlet></router-outlet>
+    <!-- <app-messages></app-messages> -->
