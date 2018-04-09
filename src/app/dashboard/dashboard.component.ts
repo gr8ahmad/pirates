@@ -21,5 +21,3 @@ export class DashboardComponent implements OnInit {
       .subscribe(pirates => this.pirates = pirates.slice(0, 5));
   }
 }
-
-}

@@ -5,6 +5,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+body.pirate1 {
+  background-image: url(./assets/jack_dmt.jpg);
+}
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;

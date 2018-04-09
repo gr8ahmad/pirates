@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Pirate } from '../pirate';
 import { PirateService } from '../pirate.service';
 import { ActivatedRoute } from '@angular/router';
@@ -13,10 +13,12 @@ export class PirateDetailComponent implements OnInit {
   pirate: Pirate;
   constructor(private pirateService: PirateService,
               private activatedRoute: ActivatedRoute,
-              private location: Location) { }
+              private location: Location,
+              private renderer: Renderer2) { }
 
   ngOnInit() {
     this.getPirate();
+    this.renderer.addClass(document.body, 'pirate' + this.id);
   }
   getPirate():void {
     this.id = +this.activatedRoute.snapshot.paramMap.get('id');
@@ -26,6 +28,9 @@ export class PirateDetailComponent implements OnInit {
   }
   goBack() {
     this.location.back();
+  }
+  ngOnDestroy() {
+    this.renderer.removeClass(document.body, 'pirate' +this.id);
   }
 
 }
