@@ -18,7 +18,7 @@ export class PirateDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getPirate();
-    this.renderer.addClass(document.body, 'pirate' + this.id);
+    this.renderer.addClass(document.body, 'pirate-detail');
   }
   getPirate():void {
     this.id = +this.activatedRoute.snapshot.paramMap.get('id');
@@ -30,7 +30,7 @@ export class PirateDetailComponent implements OnInit {
     this.location.back();
   }
   ngOnDestroy() {
-    this.renderer.removeClass(document.body, 'pirate' +this.id);
+    this.renderer.removeClass(document.body, 'pirate-detail');
   }
 
 }

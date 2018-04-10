@@ -4,9 +4,10 @@ body {
   background-image: url(./assets/pirates-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
-body.pirate1 {
-  background-image: url(./assets/jack_dmt.jpg);
+body.pirate-detail {
+  background-image: url(./assets/details-bg.jpeg);
 }
 h1 {
   color: #369;

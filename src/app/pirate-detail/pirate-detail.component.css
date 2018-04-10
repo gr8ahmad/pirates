@@ -1,0 +1,16 @@
+.details-container {
+    margin-top: 80px;
+}
+.details-container h2 {
+    color: #fff;
+}
+.col-img {
+display: flex;
+}
+.btn-back {
+    padding: 5px;
+    border-radius: 2px solid;
+    background: lightgreen;
+    color: #000;
+    border: 1px solid lightgreen;
+}
