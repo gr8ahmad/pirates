@@ -12,6 +12,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthService } from './auth/auth.service';
+import { AuthGuardService } from './auth/auth-guard.service';
+import { LoginComponent } from './auth/login/login.component';
 
 
 @NgModule({
@@ -20,7 +23,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PiratesComponent,
     PirateDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     HttpModule
   ],
-  providers: [PirateService, MessageService],
+  providers: [PirateService, MessageService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

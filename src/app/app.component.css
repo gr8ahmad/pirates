@@ -17,13 +17,13 @@ nav a {
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
-  background-color: #51a354;
+  /* background-color: #51a354; */
   border-radius: 4px;
 }
 
 nav a:visited,
 a:link {
-  color: #fff;
+  color: #000;
 }
 
 nav a:hover {
@@ -33,4 +33,16 @@ nav a:hover {
 
 nav a.active {
   color: #039be5;
+}
+.nav-trigger {
+position: fixed;
+top: 30px;
+right: 30px;
+width: 50px;
+height: auto;
+transition: all .5s ease;
+cursor: pointer;
+}
+.nav-trigger:hover {
+  transform: rotate(55deg);
 }

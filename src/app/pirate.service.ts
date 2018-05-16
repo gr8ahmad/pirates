@@ -7,9 +7,11 @@ import { MessageService } from './message.service';
 import { Http } from '@angular/http';
 @Injectable()
 export class PirateService {
-
+baseUrl:string;
   constructor(private messageService:MessageService,
-              private http: Http) { }
+              private http: Http) {
+    this.baseUrl = 'https://hacker-news.firebaseio.com/v0';
+               }
   getPirates(): Observable<Pirate[]> {
     this.messageService.add("PIRATE SERVICE: Fetched Pirates")
     return of(PIRATES)
@@ -20,11 +22,5 @@ export class PirateService {
   }
   addPirates(pirates: Pirate[]) {
     return this.http.put('https://pirates-72ec7.firebaseio.com/data.json', pirates);
-  }
-  getHackerStories() {
-    return this.http.get('https://hacker-news.firebaseio.com/v0/topstories.json');
-  }
-  fetchHackers(id:number):Observable<any> {
-    return this.http.get('https://hacker-news.firebaseio.com/v0/item/'+ id +'.json')
   }
 }

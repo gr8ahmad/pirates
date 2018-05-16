@@ -1,4 +1,5 @@
 /* DashboardComponent's private CSS styles */
+
 [class*='col-'] {
   float: left;
   padding-right: 20px;
@@ -35,13 +36,14 @@ h4 {
 }
 
 .col-1-4 {
-  /* width: 33.33%; */
-  max-width: 230px;
-}
-.col-1-4 img {
-  max-width: 230px;
+  max-width: 250px;
+  margin: 0 5px;
 }
 
+.col-1-4 img {
+  max-width: 250px;
+  border-radius: 4px;
+}
 
 .module {
   text-align: center;
@@ -55,7 +57,10 @@ h4 {
   cursor: pointer;
   color: #607d8b;
 }
-
+.pirates-title {
+    color: #fff;
+  margin: 40px 0 60px;
+}
 .grid-pad {
   padding: 10px 0;
   display: flex;
@@ -63,14 +68,48 @@ h4 {
   max-width: 1200px;
   margin: auto;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+  /* position: absolute;
+  left: 0;
+  top: 0; */
+   max-width: 100%;
+  align-items: center;
 }
+
 .pirate-container {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid-pad>[class*='col-']:last-of-type {
   padding-right: 20px;
+}
+
+.pirate-container {
+  position: relative;
+}
+
+.pirate-name {
+  display: block;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .5);
+  opacity: 0;
+  transition: opacity .5s ease;
+  font-family: vinque;
+}
+
+.pirate-container:hover .pirate-name {
+  opacity: 1;
+  transition: opacity .5 sease;
 }
 
 @media (max-width: 600px) {

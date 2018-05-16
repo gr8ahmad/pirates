@@ -1,11 +1,15 @@
 <header>
-<nav style="position: fixed;left:0;top:0">
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/pirates">Pirates</a>
-</nav>
-<div class="logo" style="text-align: center">
+  <div class="nav-container">
+  <img src="https://cdn1.iconfinder.com/data/icons/maps-and-gps/512/compass-512.png"
+  class="nav-trigger">
+  <nav style="position: fixed;left:0;top:0">
+    <a routerLink="/dashboard" class="btn-p">Dashboard</a>
+    <a routerLink="/pirates" class="btn-p">Pirates</a>
+  </nav>
+  </div>
+  <div class="logo" style="text-align: center">
     <img src="../assets/pirates-logo.png" style="width: 250px">
-</div>
+  </div>
 </header>
-    <router-outlet></router-outlet>
-    <!-- <app-messages></app-messages> -->
+<router-outlet></router-outlet>
+<!-- <app-messages></app-messages> -->
